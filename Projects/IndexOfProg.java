@@ -14,10 +14,8 @@ public class IndexOfProg {
 			System.out.println("a substring can't be longer that an actual string");
 			} else {
 
-
 				int ind = -1;
-				boolean flag = true;
-
+				
 				System.out.println("indexOf: " + str.indexOf(str1));
 				System.out.print("My code: ");
 
@@ -26,6 +24,7 @@ public class IndexOfProg {
 						ind = i;                           //запоминаю индекс строки, чтобы проверить всю подстроку
 						int i1 = i;
 						int j = 0;
+						boolean flag = true;
 
 						int count = 1;
 
@@ -33,17 +32,16 @@ public class IndexOfProg {
 							if (  (i1 > strA.length-1) || (strA[i1] != str1A[j]) ) {   // если строка закончилась (выход будет) 
 								ind = -1; 											  // или соответ символ строки != сиволу подстроки
 								flag = false;										  // флаг = фолс, искомый индекс к начальному значению
+							} else {
+	                                                                     // увеличение индексов строки и подстроки для соответ сравнения
+								j += 1;
+								i1 = i1 + 1;
+								count++;
 							}
-                                                                          // увеличение индексов строки и подстроки для соответ сравнения
-							j += 1;
-							i1 = i1 + 1;
-							count++;
 						}
 
 						if (count == str1A.length + 1 ) {     // если полностью выполнился цикл while, значит было найдено ind, break из всего цикла поиска
 							break;
-						// } else {    // иначе while остановился аварийно, нужно искать заново, активируем флаг
-						// 	flag = true; 
 						}
 
 					}
