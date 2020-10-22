@@ -13,12 +13,21 @@ public class Task22_NOD {
 			System.exit(1);
 		}
 		int n1 = scan.nextInt();
+		if ( n1 < 1 ) {
+			System.out.println("input a POSITIVE natural number");
+			System.exit(1);
+		}
 
 		if (!scan.hasNextInt()) {
 			System.out.println("input 2nd NATURAL number");
 			System.exit(1);
 		}
 		int n2 = scan.nextInt();
+		if ( n2 < 1 ) {
+			System.out.println("input a POSITIVE natural number");
+			System.exit(1);
+		}
+
 
 		//GCD by enumerative technique
 		long t00 = System.nanoTime();
@@ -44,7 +53,6 @@ public class Task22_NOD {
 			}
 		}
 		long t11 = System.nanoTime();
-		//System.out.println(t10 + " " + t11);
 
 		long time1 = t01 - t00;
 		long time2 = t11 - t10;

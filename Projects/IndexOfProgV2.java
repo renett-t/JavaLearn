@@ -5,8 +5,8 @@ public class IndexOfProgV2 {
 		if (args.length != 2) {
 			System.out.println("please input 2 parametres: a string and a substring");
 		} else {
-			String str = String.valueOf(args[0]);
-		    String str1 = String.valueOf(args[1]);
+			String str = String.valueOf(args[0]).toLowerCase();
+		    String str1 = String.valueOf(args[1]).toLowerCase();
 		    int l1 = str1.length();
 			int l = str.length();
 			int ind = -1;

@@ -14,7 +14,7 @@ public class Task8_CosX {
 				System.out.println("input a natural number of embeddings");
 			}
 			else {
-				int n = (int) Math.round(n0);
+				int n = Math.round(n0);
 				double radX = Math.toRadians(x);
 				double val = 0D;
 

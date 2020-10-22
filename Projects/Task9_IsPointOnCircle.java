@@ -1,5 +1,7 @@
 public class Task9_IsPointOnCircle{
 
+	static final double EPS = 1e-8;
+
 	public static void main(String[] args){
 
 		if (args.length != 5) {
@@ -17,14 +19,14 @@ public class Task9_IsPointOnCircle{
 			}
 			else {
 
-				if ( (x - x0)*(x - x0) + (y - y0)*(y - y0) == r*r ){
+				if ( Math.abs((x - x0)*(x - x0) + (y - y0)*(y - y0) - r*r) < EPS) {
 
-					System.out.println("the point ( " + x0 +" , " + y0 + " ) is on the circumference");
+					System.out.println("the point ( " + x +" , " + y + " ) is on the circumference");
 
 				}
 				else {
 
-					System.out.println("the point ( " + x0 +" , " + y0 + " ) is NOT on the circumference");
+					System.out.println("the point ( " + x +" , " + y + " ) is NOT on the circumference");
 					
 				}
 

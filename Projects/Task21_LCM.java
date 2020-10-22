@@ -1,3 +1,5 @@
+// THE ALGORYTHM NEEDS IMPROVEMENT
+
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -9,15 +11,15 @@ public class Task21_LCM {
 		Scanner scn = new Scanner(System.in);
 
 		System.out.println("Input 2 numbers: ");
-		if (!scn.hasNextInt()) {
+		if (!scn.hasNextI nt()) {
 			System.out.println("input only natural numbers");
-			System.exit(0);
+			System.exit(1);
 		}
 		int n1 = scn.nextInt();
 
 		if (!scn.hasNextInt()) {
 			System.out.println("input 2nd natural numbers");
-			System.exit(0);
+			System.exit(1);
 		}
 		int n2 = scn.nextInt();
 

@@ -7,16 +7,13 @@ public class Task27_ArrayInArray {
 
 		Scanner scn = new Scanner(System.in);
 		System.out.println("Input SubArray's size and its elements");
-		if (!scn.hasNextInt()) {
-			System.out.println("Size must be a natural number");
-			System.exit(1);
-		}
+		
+		String input = scn.nextLine();
+		int n2 = Integer.parseInt(input);
 
-		int n2 = scn.nextInt();
 		String subarr[] = new String[n2];
-		String trash = scn.nextLine();
 
-		for (int i = 0 ; i <= n2 - 1 ; i++) {
+		for (int i = 0 ; i < n2 ; i++) {
 			subarr[i] = scn.nextLine();
 		}
 		System.out.println(Arrays.toString(subarr));
@@ -27,14 +24,15 @@ public class Task27_ArrayInArray {
 			System.exit(1);
 		}
 
-		int n1 = scn.nextInt();
+		input = scn.nextLine();
+		int n1 = Integer.parseInt(input);
+		
 		if ( n1 < n2 ) {
 			System.out.println("the size of SubArray is greater then the size of Array. Think and input again.");
 			System.exit(1);
 		}
 
 		String arr[] = new String[n1];
-		trash = scn.nextLine();
 
 		for (int i = 0 ; i <= n1 - 1 ; i++) {
 			arr[i] = scn.nextLine();
