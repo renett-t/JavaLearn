@@ -1,0 +1,9 @@
+├──
+│
+└──
+ls и ls -l
+cd path
+touch filepath
+mkdir path
+tree path
+rm path|filepath
